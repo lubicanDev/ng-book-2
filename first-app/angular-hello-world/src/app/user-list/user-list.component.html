@@ -1,0 +1,16 @@
+<p>
+    user-list works!
+</p>
+
+<ul>
+
+    <!--    <li *ngFor="let name of names">Hello {{name}}</li>-->
+
+    <!--Instead of rendering each name within the UserListComponent, we ought to use UserItemComponent as a child component - that is, instead of rendering the text Hello and the name directly, we should let our UserItemComponent specify the template (and functionality) of each item in the list.-->
+
+    <li *ngFor="let individualUserName of names">
+        <app-user-item [name]="individualUserName"></app-user-item>
+
+    </li>
+
+</ul>
